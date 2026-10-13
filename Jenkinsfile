@@ -7,9 +7,10 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
+        stage('Checkout / Workspace') {
             steps {
-                checkout scm
+                echo 'Building the local Course Registration project'
+                bat 'git status --short'
             }
         }
 
